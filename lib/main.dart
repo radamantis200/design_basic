@@ -15,10 +15,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
-    return MaterialApp(initialRoute: 'home_design', routes: {
-      'basic_design': (_) => const BasicDesignScreen(),
-      'scroll_design': (_) => const ScrollDesign(),
-      'home_design': (_) => const HomeDesign()
-    });
+    return MaterialApp(
+        theme: ThemeData.dark(),
+        initialRoute: 'home_design',
+        routes: {
+          'basic_design': (_) => const BasicDesignScreen(),
+          'scroll_design': (_) => const ScrollDesign(),
+          'home_design': (_) => const HomeDesign()
+        });
   }
 }
